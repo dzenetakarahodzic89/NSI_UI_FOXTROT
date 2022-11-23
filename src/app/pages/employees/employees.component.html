@@ -1,0 +1,18 @@
+<div class="content-wrapper">
+  <div class="page-head-wrapper">
+    <h1 class="content-title">EMPLOYEES</h1>
+    <button type="button" class="new-btn btn btn-primary" (click)="btnClick('/employee/create');"><i class="fa fa-plus"></i>New employee</button>
+  </div>
+  <div>
+    <input
+      class="search-box"
+      type="text"
+      placeholder="Search by name, surname, phone, unit or any other employee info" (change)="search($event)">
+  </div>
+  <app-list
+    [dataSource]="searchKeyword != '' ? filteredClients : employees"
+    [displayedColumns]="displayedColumns"
+    [actionColumns]="actionColumns"
+    [baseLink]="baseLink">
+  </app-list>
+</div>

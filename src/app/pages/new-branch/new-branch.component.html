@@ -1,0 +1,19 @@
+<div class="content-wrapper">
+  <h1 class="content-title">NEW BRANCH</h1>
+  <app-form
+    [fields]="fields"
+    [readonly]="false"
+    (dataChanged)="onBranchChange($event)"
+    [validationResults]="validationResults"
+    [showLabel]="true">
+  </app-form>
+  <div class="bottom-buttons-container">
+    <button type="button" class="bottom-button btn btn-primary" (click)="onSave()">
+      <i class="fa fa-plus"></i>Save
+    </button>
+    <button type="button" class="bottom-button btn btn-outline-primary" (click)="onClose()">
+      <i class="fa fa-plus"></i>Close
+    </button>
+  </div>
+</div>
+

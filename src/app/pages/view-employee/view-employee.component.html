@@ -1,0 +1,14 @@
+<div class="content-wrapper">
+  <h1 class="form-title content-title">VIEW EMPLOYEE</h1>
+  <app-form
+    [data]="employeeData"
+    [showLabel]="true"
+    [readonly]="true"
+    [fields]="fields">
+  </app-form>
+  <div class="bottom-buttons-container">
+    <button type="button" class="bottom-button btn btn-outline-primary" (click)="onClose()">
+      <i class="fa fa-plus"></i>Close
+    </button>
+  </div>
+</div>

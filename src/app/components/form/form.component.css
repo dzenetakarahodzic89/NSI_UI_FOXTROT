@@ -1,0 +1,29 @@
+.form-control {
+  border: 1px solid #4893CB;
+  border-radius: 4px !important;
+  padding-left: 10px !important;
+  padding-right: 10px !important;
+  color: #4893CB;
+}
+
+/*.form-control:focus {*/
+/*  border-color: inherit;*/
+/*  -webkit-box-shadow: none;*/
+/*  box-shadow: none;*/
+/*  border-bottom-color: #4893CB;*/
+/*}*/
+
+label {
+  color: #888888;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.form-group {
+  margin-bottom: 30px;
+}
+
+.invalid {
+  border-color: red !important;
+  color: red;
+}

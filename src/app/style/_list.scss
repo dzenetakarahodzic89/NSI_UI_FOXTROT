@@ -1,0 +1,19 @@
+.content-table {
+  margin-top: 50px;
+  table-layout: fixed;
+  width: 100%;
+  display: table;
+}
+
+.mat-row {
+  height: 65px !important;
+}
+
+.mat-cell, .mat-header-cell {
+  font-size: 13.5px !important;
+  color: #003459;
+}
+
+.mat-flat-button {
+  background-color: #4893CB !important;
+}

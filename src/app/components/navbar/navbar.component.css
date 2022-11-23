@@ -1,0 +1,46 @@
+.mat-toolbar.mat-primary {
+  background: #003459;
+  color: #fff;
+}
+
+.main-navbar {
+  height: 70px;
+  background-image: linear-gradient(to bottom right, #003459, #4893CB) !important;
+}
+
+.logo-img {
+  width: 40px;
+  margin-left: 40px;
+  margin-right: 20px;
+}
+
+h1 {
+  font-weight: 600;
+}
+
+.right {
+  margin-top: 5px;
+  float: right;
+  right: 40px !important;
+  position: fixed;
+  display: grid;
+  cursor: pointer !important;
+  z-index: 999999;
+}
+
+.right i {
+  margin-left: 5px;
+  cursor: pointer !important;
+}
+
+span {
+  font-size: 10px;
+}
+
+.fade {
+  opacity: 1 !important;
+}
+
+.fade:hover {
+  opacity: 0.5 !important;
+}

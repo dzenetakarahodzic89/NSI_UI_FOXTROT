@@ -1,0 +1,12 @@
+.div-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    height: 100%;
+}
+.content-wrapper{
+    height: calc(100vh - 0px - 103px) !important;
+}
+.list{
+    height: calc(100vh - 0px - 224px);
+    overflow: scroll;
+}

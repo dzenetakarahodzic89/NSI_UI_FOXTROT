@@ -1,0 +1,74 @@
+<form class="form">
+  <div class="side-form">
+    <ng-container *ngFor="let property of fields | slice:0:5;">
+      <div class="form-group">
+        <label for="{{property}}" *ngIf="showLabel">{{property.label.toUpperCase()}}</label>
+        <input *ngIf="property.inputType === 'text'"
+               type="{{property.inputType}}"
+               name="{{property.key}}"
+               class="form-control {{isInvalid(property.key) && 'invalid'}}"
+               placeholder="Enter {{property.label}}"
+               value="{{data && data[property.key]}}"
+               (change)="onInputChange($event)"
+               [readonly]="readonly">
+        <select *ngIf="property.inputType === 'select'" class="form-control" (change)="onInputChange($event)" >
+          <option selected="{{!!data}}">Select Branch</option>
+          <option *ngFor="let option of property.options"
+                  [value]="option['id']"
+                  [selected]="data && option['id'] == data[property.key]">{{option[property.optionKey]}}
+          </option>
+        </select>
+        <span *ngIf="isInvalid(property.key)" class="invalid">{{getValidationMessage(property.key)}}</span>
+      </div>
+    </ng-container>
+  </div>
+  <div class="side-form">
+    <ng-container *ngFor="let property of fields | slice:5: 10;">
+      <div class="form-group">
+        <label for="{{property}}" *ngIf="showLabel">{{property.label.toUpperCase()}}</label>
+        <input *ngIf="property.inputType === 'text'"
+               type="{{property.inputType}}"
+               name="{{property.key}}"
+               class="form-control"
+               placeholder="Enter {{property.label}}"
+               value="{{data && data[property.key]}}"
+               (change)="onInputChange($event)"
+               [readonly]="readonly">
+        <select *ngIf="property.inputType === 'select'"
+                class="form-control"
+                (select)="onInputChange($event)">
+          <option selected="{{!!data}}">Select Branch</option>
+          <option *ngFor="let option of property.options"
+                  [value]="option['id']"
+                  [selected]="data && option['id'] == data[property.key]">
+            {{option[property.optionKey]}}
+          </option>
+        </select>
+        <span *ngIf="isInvalid(property.key)" class="invalid">{{getValidationMessage(property.key)}}</span>
+      </div>
+    </ng-container>
+  </div>
+  <div class="side-form">
+    <ng-container *ngFor="let property of fields | slice:10;">
+      <div class="form-group">
+        <label for="{{property}}" *ngIf="showLabel">{{property.label.toUpperCase()}}</label>
+        <input *ngIf="property.inputType === 'text'"
+               type="{{property.inputType}}"
+               name="{{property.key}}"
+               class="form-control"
+               placeholder="Enter {{property.label}}"
+               value="{{data && data[property.key]}}"
+               (change)="onInputChange($event)"
+               [readonly]="readonly">
+        <select *ngIf="property.inputType === 'select'" class="form-control" (change)="onInputChange($event)"  name="branchId" >
+          <option selected="{{!!data}}">Select Branch</option>
+          <option *ngFor="let option of property.options"
+                  [value]="option['id']"
+                  [selected]="data && option['id'] == data[property.key]">{{option[property.optionKey]}}
+          </option>
+        </select>
+        <span *ngIf="isInvalid(property.key)" class="invalid">{{getValidationMessage(property.key)}}</span>
+      </div>
+    </ng-container>
+  </div>
+</form>

@@ -1,0 +1,72 @@
+.description-container {
+  background: #003459;
+  opacity: 0.8;
+  width: 450px;
+  margin-left: 100px;
+  padding: 100px 50px 30px;
+}
+.description1 {
+  display: inline-flex;
+  line-height: 50px;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.description2 {
+  display: block;
+  font-size: 20px;
+}
+
+.content-wrapper {
+  background-image: url("../../../assets/family2.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 0;
+  position: relative;
+  color: white;
+}
+
+.main {
+  width: 100%;
+  height: 300px;
+  background-color: white;
+  border-bottom-left-radius: 7px;
+  border-bottom-right-radius: 7px;
+  bottom: 0;
+  margin-bottom: 0;
+  position: absolute;
+  color: white;
+}
+
+.cards-container {
+  background-color: #003459;
+  height: 300px;
+  margin-top: -100px;
+  margin-left: 100px;
+  margin-right: 100px;
+  display: flex;
+}
+
+.card {
+  flex: 1;
+  border-radius: 0;
+  background: transparent;
+  padding: 20px;
+  border: none;
+}
+
+.icon {
+  font-size: 35px !important;
+}
+
+.card-title {
+  font-size: 20px;
+  font-weight: 500;
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+.card-description {
+  margin-bottom: 30px;
+}
+

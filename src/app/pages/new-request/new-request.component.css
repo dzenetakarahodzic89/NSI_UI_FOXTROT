@@ -1,0 +1,49 @@
+.content-wrapper {
+    height: calc(100vh - 0px - 103px) !important;
+    overflow: auto;
+}
+
+.title-margin {
+    margin-bottom: 35px;
+}
+
+.form-align {
+    width: fit-content;
+    margin: auto;
+}
+
+.file-input {
+    display: none;
+}
+
+.save-btn {
+    margin: 0 10px;
+}
+
+.btn-align {
+    width: fit-content;
+    margin: auto;
+}
+
+.icon-margin {
+    margin-left: 15px;
+}
+
+.no-float {
+    float: none;
+}
+
+.data-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-control {
+    border: 1px solid #4893CB;
+    border-radius: 4px !important;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+    color: #4893CB;
+    display: inline;
+    margin: 15px;
+}

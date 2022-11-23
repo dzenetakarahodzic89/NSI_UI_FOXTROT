@@ -1,0 +1,58 @@
+@import "~primeicons/primeicons.css";
+@import "~primeng/resources/primeng.min.css";
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; overflow: hidden }
+
+.content-title {
+  font-size: 25px;
+  color: #003459;
+  float: left;
+}
+
+.search-box {
+  margin-top: 30px;
+  height: 40px;
+  border: 0;
+  border-bottom: 1px solid black;
+  width: 100% !important;
+  font-size: 13.5px !important;
+}
+
+.search-box:focus {
+  border-bottom-color: #4893CB !important;
+}
+
+.search-box::placeholder {
+  font-size: 14px;
+}
+
+.page-head-wrapper {
+  display: inline;
+}
+
+.add-new-btn {
+  display: block;
+  float: right;
+  right: 0;
+  color: white;
+}
+
+.content-wrapper {
+  padding: 60px 70px 70px;
+  margin: 25px;
+  background: white;
+  border-radius: 7px;
+  box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%);
+  transition: 0.3s;
+  height: 86vh !important;
+  overflow: auto;
+}
+
+app-clients, app-dashboard, app-employees,
+app-list, app-new-client, app-new-employee,
+app-view-client, app-view-employee, app-edit-client,
+app-edit-employee, app-requests, app-roles-and-permissions, app-new-request, app-document-preview ,app-profile, app-branches, app-new-branch, app-all-requests {
+  z-index: 100000;
+  width: 100%;
+  background: #dee1e7 !important;
+}

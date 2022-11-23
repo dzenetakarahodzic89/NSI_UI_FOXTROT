@@ -1,0 +1,6 @@
+.content-wrapper {
+    height: calc(100vh - 0px - 103px) !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

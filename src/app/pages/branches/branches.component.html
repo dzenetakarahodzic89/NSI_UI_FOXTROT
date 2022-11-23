@@ -1,0 +1,22 @@
+<div class="content-wrapper">
+  <div class="page-head-wrapper">
+    <h1 class="content-title">BRANCHES</h1>
+    <button type="button" class="new-btn btn btn-primary" (click)="btnClick('/branches/create');">
+      <i class="fa fa-plus"></i>New branch
+    </button>
+  </div>
+  <div>
+    <input
+      class="search-box"
+      type="text"
+      placeholder="Search branches by ID, city or address"
+      (change)="search($event)">
+  </div>
+  <app-list
+    [dataSource]="searchKeyword != '' ? filteredBranches : branches"
+    [displayedColumns]="displayedColumns"
+    [actionColumns]="actionColumns"
+    (delete)="delete($event)"
+    [baseLink]="baseLink">
+  </app-list>
+</div>

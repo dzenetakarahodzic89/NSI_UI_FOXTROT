@@ -1,0 +1,12 @@
+.main-page {
+  display: flex;
+}
+
+.content {
+  padding: 70px;
+  width: 100%;
+}
+
+.content-title {
+  font-size: 15px;
+}

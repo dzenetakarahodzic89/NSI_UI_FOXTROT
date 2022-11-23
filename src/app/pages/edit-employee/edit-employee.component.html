@@ -1,0 +1,21 @@
+<div class="content-wrapper">
+  <h1 class="form-title content-title">EDIT EMPLOYEE</h1>
+  <app-form
+    [data]="employeeData"
+    [showLabel]="true"
+    [readonly]="false"
+    [fields]="fields">
+  </app-form>
+  <button type="button" class="upload-btn btn btn-primary">
+    <i class="fa fa-plus"></i>Upload documentation
+  </button>
+  <br><br><br>
+  <div class="bottom-buttons-container">
+    <button type="button" class="bottom-button btn btn-primary" (click)="onSave()">
+      <i class="fa fa-plus"></i>Save
+    </button>
+    <button type="button" class="bottom-button btn btn-outline-primary" (click)="onClose()">
+      <i class="fa fa-plus"></i>Close
+    </button>
+  </div>
+</div>

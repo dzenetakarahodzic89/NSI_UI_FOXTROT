@@ -1,0 +1,21 @@
+<div class="content-wrapper">
+  <div class="page-head-wrapper">
+    <h1 class="content-title">CLIENTS</h1>
+    <button type="button" class="new-btn btn btn-primary" (click)="btnClick('/clients/create');">
+      <i class="fa fa-plus"></i>New client
+    </button>
+  </div>
+  <div>
+    <input
+      class="search-box"
+      type="text"
+      placeholder="Search clients by client info"
+      (change)="search($event)">
+  </div>
+  <app-list
+    [dataSource]="searchKeyword != '' ? filteredClients : clients"
+    [displayedColumns]="displayedColumns"
+    [actionColumns]="actionColumns"
+    [baseLink]="baseLink">
+  </app-list>
+</div>

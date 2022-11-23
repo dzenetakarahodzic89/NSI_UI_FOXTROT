@@ -1,0 +1,35 @@
+<div class="content-wrapper">
+  <h1 class="form-title title-margin content-title no-float">{{isEditMode ? 'EDIT' : 'PREVIEW'}} REQUEST</h1>
+
+  <div *ngIf="!!response" class="data-wrapper">
+    <span class="form-control">Username: {{response.data.user.name}}</span>
+    <span class="form-control">Employee {{response.data.employee.name}}</span>
+    <span class="form-control">Request status: {{response.data.requestStatus.name}}</span>
+    <span class="form-control">Request type: {{response.data.requestType.name}}</span>
+    
+    <a *ngFor="let document of response.data.documents" style="cursor: pointer;" class="form-control" (click)="preview(document.id)">{{document.documentType.name}}</a>
+  </div>
+
+  <form *ngIf="isEditMode" class="form-align">
+    <mat-form-field appearance="fill">
+      <mat-label>Choose document type:</mat-label>
+      <select matNativeControl [(ngModel)]="selectedReq" name="request">
+        <option value="" selectedReq></option>
+        <option *ngFor="let request of requests" [value]="request.id">
+          {{request.name}}
+        </option>
+      </select>
+    </mat-form-field>
+    <!-- <p> Selected request: {{selectedReq}} </p> -->
+    <input type="file" class="file-input" (change)="onFileSelected($event)" #fileUpload>
+    <div class="file-upload">
+      {{fileName || "No file uploaded yet."}}
+      <button mat-mini-fab color="primary" class="upload-btn icon-margin" (click)="fileUpload.click()">
+        <mat-icon>attach_file</mat-icon>
+      </button>
+    </div>
+    <button mat-raised-button color="primary"
+        class="save-btn btn-align mat-focus-indicator mat-raised-button mat-button-base mat-primary" (click)="onSave()">Save
+      </button>
+  </form>
+</div>

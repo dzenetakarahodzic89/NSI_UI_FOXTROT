@@ -1,0 +1,51 @@
+<div class="div-grid">
+<div class="container">
+    <div class="row">
+        <label (click)="dajusera()">{{user.name}} {{user.email}}</label>   
+    </div>
+</div>
+
+<div *ngIf="prikaziRolu" class="container">
+    <div class="row">
+        <table>
+            <thead>
+                <tr>
+                    <th colspan="2">RoleName</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let role of user.roles">
+                    <td (click)="dajPermisije(role)">{{role.name}}<td>
+                    <td (click)="deleteRole(role,user.id)">Delete</td>
+                </tr>
+            </tbody>
+        </table>
+        <hr/>
+        <button type="button" class="new-btn btn btn-primary" (click)="btnClickExist();"><i class="fa fa-plus"></i>New exist role</button>
+        <button type="button" class="new-btn btn btn-primary" (click)="btnClick();"><i class="fa fa-plus"></i>Add new role</button>
+        <!-- <select></select>  -->
+        <div *ngIf="prikaziDodajPermisiju" class="dodajRolu">
+            <input placeholder="RoleName" [(ngModel)]="rolaName"/>
+            
+        </div>
+        <div *ngIf="prikaziDodajPostojecuRolu" class="dodajRolu">
+            <select (change)="onChangeRole($event.target.value)">
+                <option *ngFor="let item of listaRola" [value]="item.name">{{item.name}}</option>
+            </select>
+            <button type="button" class="bottom-button btn btn-primary" (click)="onSaveExistRole(user.id)">
+                <i class="fa fa-plus"></i>Add
+            </button>
+        </div>
+    </div>
+</div>
+<div *ngIf="prikaziPermisiju" class="container">
+    <div *ngFor="let permisija of pravePermisije">
+        <input type="checkbox" (checked)="permisija.check" [(ngModel)]="permisija.check"/>
+        <label>{{permisija.value}}</label>
+    </div>
+    <hr/>
+    <button type="button" class="bottom-button btn btn-primary" (click)="onSave(pravePermisije)">
+        <i class="fa fa-plus"></i>Save
+      </button>
+</div>
+</div>

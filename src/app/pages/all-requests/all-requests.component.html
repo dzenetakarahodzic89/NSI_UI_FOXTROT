@@ -1,0 +1,38 @@
+<div class="content-wrapper">
+    <div class="table-wrapper">  
+      <mat-table class="content-table mat-elevation-z0" [dataSource]="dataSource">
+
+        <ng-container *ngFor="let disCol of displayedColumns;" matColumnDef="{{disCol}}">
+          <mat-header-cell *matHeaderCellDef>{{disCol.toUpperCase()}}</mat-header-cell>
+          <mat-cell class="table-cell" *matCellDef="let element "> {{element[disCol]}}</mat-cell>
+        </ng-container>
+
+        <ng-container *ngIf="allColumns.includes('View')" matColumnDef="View">
+            <mat-header-cell *matHeaderCellDef>VIEW</mat-header-cell>
+            <mat-cell class="table-cell" *matCellDef="let element ">
+              <button type="button" class="new-btn btn btn-primary" (click)="view(element['id'])">View</button>
+            </mat-cell>
+          </ng-container>
+      
+        <ng-container *ngIf="allColumns.includes('Edit')" matColumnDef="Edit">
+          <mat-header-cell *matHeaderCellDef>APPROVE</mat-header-cell>
+          <mat-cell class="table-cell" *matCellDef="let element ">
+            <button type="button" class="new-btn btn btn-primary" (click)="approve(element['id'])">Approve</button>
+          </mat-cell>
+        </ng-container>
+      
+        <ng-container *ngIf="allColumns.includes('Delete')" matColumnDef="Delete">
+          <mat-header-cell *matHeaderCellDef>DECLINE</mat-header-cell>
+          <mat-cell class="table-cell" *matCellDef="let element ">
+            <button type="button" class="new-btn btn btn-primary" (click)="decline(element['id'])">Decline</button>
+          </mat-cell>
+        </ng-container>
+      
+        <mat-header-row *matHeaderRowDef="allColumns"></mat-header-row>
+      
+        <mat-row *matRowDef="let row; columns: allColumns;"></mat-row>
+      
+      </mat-table>
+  
+    </div>
+</div>
